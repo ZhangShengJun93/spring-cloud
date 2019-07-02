@@ -18,7 +18,7 @@ public class HelloController {
 
     @Value("${server.port}")
     private String port;
-    @Value("${key:}")
+    @Value("${key}")
     private String key;
 
 

@@ -3,11 +3,6 @@ server:
 spring:
   application:
     name: provider
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:7001/eureka/
-    fetch-registry: true
 
 management:
   endpoints:
