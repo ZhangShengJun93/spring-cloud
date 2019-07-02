@@ -10,9 +10,9 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>config-server</artifactId>
+    <artifactId>config</artifactId>
     <version>0.0.1</version>
-    <name>config-server</name>
+    <name>config</name>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
