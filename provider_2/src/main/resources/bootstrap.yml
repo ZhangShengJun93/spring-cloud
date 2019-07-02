@@ -1,0 +1,24 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+    fetch-registry: true
+spring:
+  cloud:
+    config:
+      name: stupidzhang-config
+      profile: test
+      label: master
+      discovery:
+        enabled: true
+        serviceId: config-server
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: admin
+    password: admin

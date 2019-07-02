@@ -7,20 +7,32 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/ZhangShengJun93/spring-cloud/     # 配置git仓库的地址
-          search-paths: config-repo                                 # git仓库地址下的相对地址，可以配置多个，用,分割。
+          uri: https://github.com/ZhangShengJun93/spring-cloud     # 配置git仓库的地址
+          search-paths: config-repo/**                               # git仓库地址下的相对地址，可以配置多个，用,分割。
           username: 739156041@qq.com                                 # git仓库的账号
           password: zsj19930607
+  bus:
+    enabled: true
+    trace:
+      enabled: true
+
+
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: admin
+    password: admin
+
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:7001/eureka/
     fetch-registry: true
-feign:
-  hystrix:
-    enabled: true
-#  instance:
-#    metadataMap:
-#      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
-
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

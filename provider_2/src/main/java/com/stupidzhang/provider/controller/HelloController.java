@@ -24,6 +24,6 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public String index(@RequestParam String name) {
-        return "hello " + name + "-" + port + "-" + key + " ，this is first messge";
+        return "hello " + name + "-" + port + "-" + key + " ，this is second messge";
     }
 }

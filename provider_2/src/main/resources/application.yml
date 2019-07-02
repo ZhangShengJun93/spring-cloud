@@ -1,5 +1,5 @@
 server:
-  port: 7003
+  port: 7005
 spring:
   application:
     name: provider
@@ -14,7 +14,4 @@ management:
     web:
       exposure:
         include: refresh
-
-#  instance:
-#    metadataMap:
-#      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+stanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
