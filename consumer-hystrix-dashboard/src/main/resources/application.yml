@@ -1,0 +1,18 @@
+server:
+  port: 7005
+spring:
+  application:
+    name: consumer
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+    fetch-registry: true
+feign:
+  hystrix:
+    enabled: true
+#  instance:
+#    metadataMap:
+#      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+

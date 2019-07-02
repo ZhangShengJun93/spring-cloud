@@ -1,0 +1,26 @@
+server:
+  port: 7006
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ZhangShengJun93/spring-cloud/     # 配置git仓库的地址
+          search-paths: config-repo                                 # git仓库地址下的相对地址，可以配置多个，用,分割。
+          username: 739156041@qq.com                                 # git仓库的账号
+          password: zsj19930607
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+    fetch-registry: true
+feign:
+  hystrix:
+    enabled: true
+#  instance:
+#    metadataMap:
+#      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+

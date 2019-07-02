@@ -8,12 +8,10 @@
         <version>2.1.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-
-    <groupId>com.stupiszhang</groupId>
-    <artifactId>spring-cloud</artifactId>
+    <groupId>com.stupidzhang</groupId>
+    <artifactId>consumer-hystrix-dashboard</artifactId>
     <version>0.0.1</version>
-    <name>spring-cloud</name>
-    <packaging>pom</packaging>
+    <name>consumer-hystrix-dashboard</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -21,24 +19,31 @@
         <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
     </properties>
 
-    <modules>
-        <module>eureka</module>
-        <module>eureka-client</module>
-        <module>rest-template</module>
-        <module>provider</module>
-        <module>consumer</module>
-        <module>config-server</module>
-        <module>consumer-hystrix-dashboard</module>
-    </modules>
-
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-netflix-hystrix-dashboard</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
         <dependency>
@@ -46,6 +51,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <dependencyManagement>

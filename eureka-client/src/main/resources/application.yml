@@ -1,14 +1,13 @@
 server:
-  port: 5002
+  port: 7002
 spring:
   application:
     name: eureka-client
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:5001/eureka/
-      register-with-eureka: false
-    fetch-registry: false
+      defaultZone: http://localhost:7001/eureka/
+    fetch-registry: true
   instance:
     metadataMap:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
